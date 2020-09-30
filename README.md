@@ -1,1 +1,270 @@
-# Ali Rmarkdown beamer Presentation
+# Ali
+
+---
+title: "Temel Bilgi Teknolojileri Kullanımı"
+subtitle: "Lecture 1"
+author: "Msc.Ali Mertcan KÖSE"
+institute: İstanbul Kent Üniversitesi
+output:
+  slidy_presentation: default
+  beamer_presentation:
+    colortheme: "default"
+    fonttheme: "default"
+    fig_caption: yes
+    keep_tex: yes
+    highlight: tango
+    number_sections: yes
+    slide_level: 2
+    theme: "dresden"
+    toc: no
+incremental: yes
+fontsize : 12pt
+mainfont: Times New Roman
+graphics: yes
+header-includes:
+  - \usepackage[document]{ragged2e}
+  - \usepackage{caption}
+  - \usepackage{graphicx}
+  - \usepackage{fancyvrb}
+---
+
+
+#### Outline
+
+1. Donanım
+
+    + *Kavramlar*
+    + *Bilgisayar performansı*
+    + *Bellek ve Depolama*
+    + *Giriş, Çıkış Birimleri*
+    
+2. Yazılım
+
+    + *Kavramlar*
+    
+3. Ağ
+
+    + *Ağ Türleri*
+    + *Veri Aktarımı*
+   
+
+# Donanım
+
+## Kavramlar
+
+\justify
+
+"Bilgi çağı" ya da "dijital çağ" olarak adlandırılan 21. y.y., teknolojik yenilikler insanlığın hizmetine sunmakla kalmamış, farklı disiplinerde yeni bilimsel yöntemlerin gelişmesine de imkan tanımıştır.
+
+Bilgi? 
+
+- **Bilgi:** Genel olarak ve ilk sezi durumunda zihnin kavradığı temel düşünceler(TDK).
+
+Dijital nedir?
+
+- **Dijital:** Verilerin bir ekran üzerinde elektronik olarak gösterilmesi (TDK).
+
+## Kavramlar
+
+
+\justify
+**Veri:** Bilgisayara girilen işlenmemiş durumundaki bilgilerdir. Yani veri belirli konulardaki gerçeklerin sembolik ifadesidir.
+
+**Enformasyon:** Verinini ilişkili bağlantılar sonucunda anlam kazanmış halidir.
+
+**Bilgi:** Bilen tarafından içselleştirildiği, tecrübe ve algıları tarafından şekillendirildiği için genellikle kişisel ve özneldir.
+
+**Bilgelik:** Şuana kadar üzerinde durduğumuz veri, enformasyon ve bilgi tamamlanmış süreçler sonunda ulaştığımız durumlar olarak değerlendirilebilir. Diğer Anlamıyla Bilgelik Bilgi piramidinin son basamağı olmakla beraber bilgi üzerinden yeni fikir üretme veya buluş aşamasıdır.
+
+## Kavramlar
+
+![Bilgi Piramidi.](C:/Users/Ali/Desktop/sunum/sunum/sekil1.jpeg){ width=50%}
+
+## Bilgisayar Performansı
+
+\justify
+> Bilgisayar(Computer), uzun ve çok karmaşık hesapları bile büyük bir hızla yapabilen, mantıksal(logic) bağlantılara dayalı karar verip işlem yürüten makinedir. Kısacası, bilgisayar, bilgi işleyen elektronik bir aygıttır.
+
+## Bilgisayar Performansı
+
+\justify
+Bugünkü bilgisayarın ve buna bağlı teknolojilerin ortaya çıkması tek bir dönemde olmamaıştır. Tarihin her bir döneminde ortaya çıkan gelişmeler, araştırmalar ve buluşlar, bugünkü bilgisayarın ortaya çıkmasında birer adım olmuştur.
+Bugün kullandığımız bilgisayarın oluşmasında yer alan gelişmelerin kronolojik sıralamasını incelersek;
+M.Ö. 3 bin yıllarında paralı alışverişin başlaması ile sayma işlemine ihtiyaç duyuldu. ilk zamanlarda 10 sayısına kadar saymak için parmakalr kullanıldı. Bu yöntem yetmeyince de, M.Ö. 2600 yıllarında bu işlemlerde kullanılmak üzere **abaküs** adı verilenn hesaplayıcılar bulundu. 
+
+## Bilgisayar Performansı
+
+![Soldan sağa doğru; Blaise Pascal, Charles Babbage, Alan Turing ve Howard Aiken.](C:/Users/Ali/Desktop/sunum/sunum/kis2.jpg){ width=70%}  
+
+\justify
+Heidelberg Üniversitesinde Wilhelm Shickard (1624), 4 fonksiyonlu hesap makinesini yaptı. Pariste Blaise Pascal(1642), ilk nümerik hesaplama makinesini yaptı. İngiliz matematikçi Charles Babbage(1812) fark makinesi üzerinde çalışmalarda bulundu ve bu çalışmalar ile bilgisayarın temelinin atıldığı söylenebilir.
+
+## Bilgisayar Performansı
+
+\justify
+Alan Turing (1936) modern bilgisayarların geliştirilmesinden çok önce, 20 y.y.'ın 2. Dünya savaşı öncersi yıllarında tasarladığı sanal makine (**Turing Makinesi**) ile algoritma olarak tabir edilen her türlü mantıksal işlem bütününü mekanik süreçlere indirgebilecek bir makine ortaya koymuştur. IBM şirketi adına çalışma yapan Harvard Üniversitesi Akademisyeni Howard Aiken ve Brown (1937)'un geliştirdiği Mark 1, ilk defa olarak insan müdhalesi olmaksızın çalışan sayısal otamatik bilgisayardır. Bu bilgisayar 4 işlemlerin yapıldığı ve bu işlemlerin depo edildiği bir makine iken, John Atansoff ve Clifford Berry (1939) ilk elektronik bilgisayarı icat etmiştir.
+
+## Bilgisayar Performansı
+
+![ENIAC(1945), UNIVAC(1960),IBM(1981) ve Macintosh(1984).](C:/Users/Ali/Desktop/sunum/sunum/kis3.jpg){ width=90%}  
+
+## Bellek ve Depolama
+
+>**Donanım:** Bilgisayarın fiziksel ve elektronik yapısını oluşturan ana birimlerin ve çevre birimlerin tümüne *donanım* denir. Örnek olarak; Ekran, klavye, ana kart, kablo gibi...
+
+## Bellek ve Depolama
+
+![Anakart.](C:/Users/Ali/Desktop/sunum/sunum/kis4.jpg){ width=70%} 
+
+## Bellek ve Depolama
+
+\justify
+**Anakart:**Bilgisayara takılan bütün parçalar arasındaki bağlantıyı bu kart sağlar.
+
+**Merkezi İşlem Birimi(CPU):** Bilgisayarın transistöründen yongasında ve diğer bütün parçalarına kadar bütün birimlerinin yönetim işlemlerini CPU yerine getirir.
+
+**Ana Bellek(RAM):** Açılan kullanıcı dosyalarını ve program dosyalarını geçici olarak tutar ve burada dosyalarla ilgili işlemlerin yapılmasında olanak verir.
+
+## Bellek ve Depolama
+
+\justify
+**Yalnız Okunabilir Bellek (ROM) ve Bios:** Elektriğin kesilmesi veya bilgisayarın kapatılması durumunda kaybolmayacak sistem bilgileri ve BİOS(Bilgisayarın açılarak çalışır duruma gelmesini sağlayan küçük bir kontrol grubudur) bu Rom bellek Chip'ine yerleştirilmiştir. 
+
+**Ön Bellek:** Ram Belliğin hızı CPU hızından düşüktür. bu yüzden ön bellek Ram ile CPU arasındaki veri transferlerinde görev yapar.
+
+**Ekran Kartı:** Ram Bellekteki bilgilerin(açık olan dosyaların) görüntülerinin ekrana iletişmesini sağlar.
+
+
+## Bellek ve Depolama
+
+![HDD ve SSD](C:/Users/Ali/Desktop/sunum/sunum/kis6.jpg){ width=70%}
+
+## Bellek ve Depolama
+
+\justify
+**Sabit Disk:** Bilgi depolamak amacı ile kullanılan kasa içerisindeki kutuya yerleştirilmiş ikincil bellek birimidir. Bilgisayardaki yazılımlar genellikle sabit diske kurulur. Kalıcı olarak saklanması istanene veri sabit diske kaydedilir. Masaüstü bilgisayarlara SATA, USB ve SAS kabloları ile bağlanan modelleri vardır. SSD'ler performans, elektrik tüketimi, ses ve dayanıklılık açısından manyetik disklere göre daha iyi olmalarına karşın kapasiteleri daha düşük ve fiyatları daha yüksektir.
+
+## Bellek ve Depolama
+
+Table 1. Boyut Kavramları
+
+
+```{r setup, include = FALSE}
+library(ggplot2)
+library(dplyr)
+library(knitr)
+library(kableExtra)
+
+
+ Sayi <- c('0 veya 1','8 bit','1024 byte','1024 KB ','1024 MB','1024 GB')
+ Boyut <- c('1 bit','1 byte','1 kilobyte','1 megabyte','1 gigabyte','1 terabyte')
+
+```
+
+```{r, echo = FALSE}
+
+employ.data <- data.frame(Sayi, Boyut)
+
+kable(employ.data) %>%
+  kable_styling(bootstrap_options = "striped", full_width = F) %>%
+  row_spec(0, bold = T)
+```
+
+## Giriş ve Çıkış Birimleri
+
+![Giriş-İşlem Birimi-Çıkış Ünitesi Diyagramı](C:/Users/Ali/Desktop/sunum/sunum/kis7.jpg){ width=70%}
+
+## Giriş ve Çıkış Birimleri
+
+![Giriş- Çıkış Birimleri](C:/Users/Ali/Desktop/sunum/sunum/kis8.jpg){ width=70%}
+
+*Kişisel bilgisayarlar bip sesi çıkarırken farklı seslerin elde edilerek çıkış birimlerine aktarılması için Ses kartının yer alması gerekir.*
+
+# Yazılım
+## Temel kavramlar
+
+\justify
+>**Yazılım:** Bilgisayarı çalıştırmaya yarayan, fiziksel kısım dışında kalan her şeye yazılım denir. Yazılım programları ifade eder. Bilgisayar bu programlar ile istenildiği gibi yönlendirilir.
+
+## Temel kavramlar
+
+- İşletim Sistemi Yazılımları
+    + Windows
+    + Macos
+    + Linux
+    + Android
+    + IOS
+- Uygulama Yazılımlar
+    + Microsoft Office
+    + Skype
+    + Google Chrome
+    + Notepad
+    + Skype vb.
+
+## Temel kavramlar
+\justify
+
+**Program:** Belirli amaca yönelik olarak yazılmış bilgisayarda yerine getirilmesi istenilen sıralı işlemler için komut ve işlem adımlarının tümüne program denmektedir.
+
+**Program Dili:** Bilgisayar programlar yazımında belli kurallar dizisi takip edilir. Bu kurallar dizisinin oluşturduğu gruba *Bilgisayar Programlama Dili* denir.
+
+**Makine Dili:**  Makine tarafından hiçbir değişikliğe uğratılmadan kullanabilen dillerdir. 
+
+**Sembolik Dili:** Sembollerle yazılan programa dilidir.
+
+
+
+
+
+## Temel kavramlar
+
+\justify
+**Alt düzey Programlama Dilleri:** Makine diline çok yakındaır. Yazılan programlar küçük bir çevirme işlemi ile makine diline dönüştürülür.
+
+**Üst Düzey Programlama Dilleri:** Bilgisayar kullanıcısının kolaylıkla yazabildiği makine diline mutlaka çevrilmesi gerek dillerdir.
+
+
+## Temel kavramlar
+
+![En Çok Kullanılan Program Dİlleri](C:/Users/Ali/Desktop/sunum/sunum/kis9.jpg){ width=50%}
+
+# Ağlar
+
+> Bilgisayar ağı: En az iki bilgisayarın kablolu ve kablosuz olarak birbiri ile bağlantı oluşturmasıdır. Bu bağlantı sonucunda iletişim ile veri alışverişi yapılabilir. 
+
+## Ağ Türleri
+
+- **LAN(Local Area Network):** Yerel bölge ağları, bilgisayarları ve diğer bilgi işlem araçlarını kısıtlı bir fiziksel çevre dahilinde birbirine kablolu olarak bağlar(ofis,ev,bina gibi). 
+
+- **WLAN(Wireless Local Area Network):**  Kablosuz yerel ağlar, dar coğrafik alanda firmaların veya hanehalkarlın kablosuz olarak bağlantılı olması durumudur.
+
+- **WAN(Wide Area Network):** Geniş bölge ağlar, ülke ve eyalet gibi geniş coğrafi bölgelerde kullanıalabilecek elektronik haberleşme ağıdır.
+
+## Ağ Türleri
+
+\justify
+**İnternet:**  Bilgisayar ve Bilgisayar ağlarının arasındaki iletişimin evrensel sisteminden oluşur, Bu iletişim TCP/IP protocols yardımıyla sağlanır. İnternet başkarda basit veri alışverişini sağlamak amacıyla ortaya çıkmasına rağmen bugünlerde bütün toplulukların sosyal alanlarını(Ekonomi, Sosyal platform, Bilgi edinme, Sağlık Eğitim gibi) etkilemiştir.
+
+**Extranet:** İnternetin bir bölümü olarak bağımsız işbirlikçilerin eriştiği bir ağdır.
+
+## Veri Aktarımı
+
+\justify
+**İndirme(Download):** Yerel bilgisayar üzerinde ağ bilgisayarından dijital veri kopyası almak olarak ifade edilen terime *İndirme(Download)* denir. Diğer taraftan ağ üzerinde dijital içerik yerleştirmeye *Yükleme(Upload)* denir.
+
+**Bitrate:** Modem(ağ) vesilesi ile veri transferi yapılması sonucunda ağ aracılığıyla dijital veri akışı hızı için ölçüm birimine *Bitrate* denir.
+
+1,000 bit/s rate = 1 kbit (her saniye üzerinden)
+
+1,000,000 bit/s rate = 1 Mbit
+
+1,000,000,000 bit/s rate = 1 Gbit 
+
+## Veri Aktarımı
+
+- **Bağlantı Metodları**
+  + Mobil 
+  + Uydu 
+  + Wireless(Wi-Fi)
+  + Kablo
+  + Geniş bant
