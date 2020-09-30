@@ -1,0 +1,86 @@
+---
+title: "Temel Bilgi Teknolojileri Kullanımı"
+author: "Msc.Ali Mertcan KOSE"
+date: "25 08 2020"
+output:
+  beamer_presentation: default
+  slidy_presentation: default
+  incremental: TRUE
+  theme: "warsaw"
+  colortheme: "seahorse"
+  latex_engine: xlatex
+  toc: true
+  slide_level: 2
+  keep_tex: true
+  ---
+
+
+## İçerik
+- Temel Kavramlar
+- Bullet 2
+- Bullet 3
+
+## Bilgisayarın Tanımı
+Bilgisayar(Computer), uzun ve çok karmaşık hesapları bile büyük bir hızla yapabilen, mantıksal(logic) bağlantılara dayalı karar verip işlem yürüten makindir. Kısacası, bilgisayar, bilgi işleyen elektronik bir aygıttır.
+
+
+
+## R Markdown
+
+This is an R Markdown presentation. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.
+
+## Create table data
+```{r setup, include = FALSE}
+library(ggplot2)
+library(dplyr)
+library(knitr)
+library(kableExtra)
+smaller <- diamonds %>% 
+  filter(carat <= 2.5)
+```
+We have data about `r nrow(diamonds)` diamonds. Only 
+`r nrow(diamonds) - nrow(smaller)` are larger than
+2.5 carats. The distribution of the remainder is shown
+below:
+
+```{r, echo = FALSE}
+smaller %>% 
+  ggplot(aes(carat)) + 
+  geom_freqpoly(binwidth = 0.01)
+```
+
+## SLİDE
+You can check table
+```{r, echo = FALSE}
+dt <- mtcars[1:5, 1:6]
+kable(dt) %>%
+  kable_styling("striped", full_width = F) %>%
+  row_spec(0, angle = -45)
+```
+## random table
+
++---------------+---------------+--------------------+
+| Fruit         | Price         | Advantages         |
++===============+===============+====================+
+| Bananas       | $1.34         | - built-in wrapper |
+|               |               | - bright color     |
++---------------+---------------+--------------------+
+| Oranges       | $2.10         | - cures scurvy     |
+|               |               | - tasty            |
++---------------+---------------+--------------------+
+
+
+
+## Slide with R Output
+```{r cars, echo = FALSE}
+summary(cars)
+```
+
+## Slide with Plot
+
+```{r pressure}
+plot(pressure)
+```
+

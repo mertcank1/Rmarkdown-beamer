@@ -1,0 +1,642 @@
+\PassOptionsToPackage{unicode=true}{hyperref} % options for packages loaded elsewhere
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  12pt,
+  ignorenonframetext,
+]{beamer}
+\usepackage{pgfpages}
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{caption label separator}{: }
+\setbeamercolor{caption name}{fg=normal text.fg}
+\beamertemplatenavigationsymbolsempty
+% Prevent slide breaks in the middle of a paragraph:
+\widowpenalties 1 10000
+\raggedbottom
+\setbeamertemplate{part page}{
+  \centering
+  \begin{beamercolorbox}[sep=16pt,center]{part title}
+    \usebeamerfont{part title}\insertpart\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{section page}{
+  \centering
+  \begin{beamercolorbox}[sep=12pt,center]{part title}
+    \usebeamerfont{section title}\insertsection\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{subsection page}{
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center]{part title}
+    \usebeamerfont{subsection title}\insertsubsection\par
+  \end{beamercolorbox}
+}
+\AtBeginPart{
+  \frame{\partpage}
+}
+\AtBeginSection{
+  \ifbibliography
+  \else
+    \frame{\sectionpage}
+  \fi
+}
+\AtBeginSubsection{
+  \frame{\subsectionpage}
+}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provides euro and other symbols
+\else % if luatex or xelatex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+  \setmainfont[]{Times New Roman}
+\fi
+\usetheme[]{dresden}
+\usefonttheme{serif} % use mainfont rather than sansfont for slide text
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Temel Bilgi Teknolojileri Kullanımı},
+  pdfauthor={Msc.Ali Mertcan KÖSE},
+  pdfborder={0 0 0},
+  breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\newif\ifbibliography
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+
+% set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+\usepackage[document]{ragged2e}
+\usepackage{caption}
+\usepackage{graphicx}
+\usepackage{fancyvrb}
+
+\title{Temel Bilgi Teknolojileri Kullanımı}
+\subtitle{Lecture 1}
+\author{Msc.Ali Mertcan KÖSE}
+\date{}
+\institute{İstanbul Kent Üniversitesi}
+
+\begin{document}
+\frame{\titlepage}
+
+\begin{frame}
+
+\begin{block}{Outline}
+
+\begin{enumerate}
+\item
+  Donanım
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \emph{Kavramlar}
+  \item
+    \emph{Bilgisayar performansı}
+  \item
+    \emph{Bellek ve Depolama}
+  \item
+    \emph{Giriş, Çıkış Birimleri}
+  \end{itemize}
+\item
+  Yazılım
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \emph{Kavramlar}
+  \end{itemize}
+\item
+  Ağ
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \emph{Ağ Türleri}
+  \item
+    \emph{Veri Aktarımı}
+  \end{itemize}
+\end{enumerate}
+
+\end{block}
+
+\end{frame}
+
+\hypertarget{donanux131m}{%
+\section{Donanım}\label{donanux131m}}
+
+\begin{frame}{Kavramlar}
+\protect\hypertarget{kavramlar}{}
+
+\justify
+
+``Bilgi çağı'' ya da ``dijital çağ'' olarak adlandırılan 21. y.y.,
+teknolojik yenilikler insanlığın hizmetine sunmakla kalmamış, farklı
+disiplinerde yeni bilimsel yöntemlerin gelişmesine de imkan tanımıştır.
+
+Bilgi?
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Bilgi:} Genel olarak ve ilk sezi durumunda zihnin kavradığı
+  temel düşünceler(TDK).
+\end{itemize}
+
+Dijital nedir?
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Dijital:} Verilerin bir ekran üzerinde elektronik olarak
+  gösterilmesi (TDK).
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Kavramlar}
+\protect\hypertarget{kavramlar-1}{}
+
+\justify
+
+\textbf{Veri:} Bilgisayara girilen işlenmemiş durumundaki bilgilerdir.
+Yani veri belirli konulardaki gerçeklerin sembolik ifadesidir.
+
+\textbf{Enformasyon:} Verinini ilişkili bağlantılar sonucunda anlam
+kazanmış halidir.
+
+\textbf{Bilgi:} Bilen tarafından içselleştirildiği, tecrübe ve algıları
+tarafından şekillendirildiği için genellikle kişisel ve özneldir.
+
+\textbf{Bilgelik:} Şuana kadar üzerinde durduğumuz veri, enformasyon ve
+bilgi tamamlanmış süreçler sonunda ulaştığımız durumlar olarak
+değerlendirilebilir. Diğer Anlamıyla Bilgelik Bilgi piramidinin son
+basamağı olmakla beraber bilgi üzerinden yeni fikir üretme veya buluş
+aşamasıdır.
+
+\end{frame}
+
+\begin{frame}{Kavramlar}
+\protect\hypertarget{kavramlar-2}{}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.5\textwidth,height=\textheight]{C:/Users/Ali/Desktop/sunum/sekil1.jpeg}
+\caption{Bilgi Piramidi.}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}{Bilgisayar Performansı}
+\protect\hypertarget{bilgisayar-performansux131}{}
+
+\justify
+
+\begin{quote}
+Bilgisayar(Computer), uzun ve çok karmaşık hesapları bile büyük bir
+hızla yapabilen, mantıksal(logic) bağlantılara dayalı karar verip işlem
+yürüten makinedir. Kısacası, bilgisayar, bilgi işleyen elektronik bir
+aygıttır.
+\end{quote}
+
+\end{frame}
+
+\begin{frame}{Bilgisayar Performansı}
+\protect\hypertarget{bilgisayar-performansux131-1}{}
+
+\justify
+
+Bugünkü bilgisayarın ve buna bağlı teknolojilerin ortaya çıkması tek bir
+dönemde olmamaıştır. Tarihin her bir döneminde ortaya çıkan gelişmeler,
+araştırmalar ve buluşlar, bugünkü bilgisayarın ortaya çıkmasında birer
+adım olmuştur. Bugün kullandığımız bilgisayarın oluşmasında yer alan
+gelişmelerin kronolojik sıralamasını incelersek; M.Ö. 3 bin yıllarında
+paralı alışverişin başlaması ile sayma işlemine ihtiyaç duyuldu. ilk
+zamanlarda 10 sayısına kadar saymak için parmakalr kullanıldı. Bu yöntem
+yetmeyince de, M.Ö. 2600 yıllarında bu işlemlerde kullanılmak üzere
+\textbf{abaküs} adı verilenn hesaplayıcılar bulundu.
+
+\end{frame}
+
+\begin{frame}{Bilgisayar Performansı}
+\protect\hypertarget{bilgisayar-performansux131-2}{}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=\textheight]{C:/Users/Ali/Desktop/sunum/kis2.jpg}
+\caption{Soldan sağa doğru; Blaise Pascal, Charles Babbage, Alan Turing
+ve Howard Aiken.}
+\end{figure}
+
+\justify
+
+Heidelberg Üniversitesinde Wilhelm Shickard (1624), 4 fonksiyonlu hesap
+makinesini yaptı. Pariste Blaise Pascal(1642), ilk nümerik hesaplama
+makinesini yaptı. İngiliz matematikçi Charles Babbage(1812) fark
+makinesi üzerinde çalışmalarda bulundu ve bu çalışmalar ile bilgisayarın
+temelinin atıldığı söylenebilir.
+
+\end{frame}
+
+\begin{frame}{Bilgisayar Performansı}
+\protect\hypertarget{bilgisayar-performansux131-3}{}
+
+\justify
+
+Alan Turing (1936) modern bilgisayarların geliştirilmesinden çok önce,
+20 y.y.'ın 2. Dünya savaşı öncersi yıllarında tasarladığı sanal makine
+(\textbf{Turing Makinesi}) ile algoritma olarak tabir edilen her türlü
+mantıksal işlem bütününü mekanik süreçlere indirgebilecek bir makine
+ortaya koymuştur. IBM şirketi adına çalışma yapan Harvard Üniversitesi
+Akademisyeni Howard Aiken ve Brown (1937)'un geliştirdiği Mark 1, ilk
+defa olarak insan müdhalesi olmaksızın çalışan sayısal otamatik
+bilgisayardır. Bu bilgisayar 4 işlemlerin yapıldığı ve bu işlemlerin
+depo edildiği bir makine iken, John Atansoff ve Clifford Berry (1939)
+ilk elektronik bilgisayarı icat etmiştir.
+
+\end{frame}
+
+\begin{frame}{Bilgisayar Performansı}
+\protect\hypertarget{bilgisayar-performansux131-4}{}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.9\textwidth,height=\textheight]{C:/Users/Ali/Desktop/sunum/kis3.jpg}
+\caption{ENIAC(1945), UNIVAC(1960),IBM(1981) ve Macintosh(1984).}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}{Bellek ve Depolama}
+\protect\hypertarget{bellek-ve-depolama}{}
+
+\begin{quote}
+\textbf{Donanım:} Bilgisayarın fiziksel ve elektronik yapısını oluşturan
+ana birimlerin ve çevre birimlerin tümüne \emph{donanım} denir. Örnek
+olarak; Ekran, klavye, ana kart, kablo gibi\ldots{}
+\end{quote}
+
+\end{frame}
+
+\begin{frame}{Bellek ve Depolama}
+\protect\hypertarget{bellek-ve-depolama-1}{}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=\textheight]{C:/Users/Ali/Desktop/sunum/kis4.jpg}
+\caption{Anakart.}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}{Bellek ve Depolama}
+\protect\hypertarget{bellek-ve-depolama-2}{}
+
+\justify
+
+\textbf{Anakart:}Bilgisayara takılan bütün parçalar arasındaki
+bağlantıyı bu kart sağlar.
+
+\textbf{Merkezi İşlem Birimi(CPU):} Bilgisayarın transistöründen
+yongasında ve diğer bütün parçalarına kadar bütün birimlerinin yönetim
+işlemlerini CPU yerine getirir.
+
+\textbf{Ana Bellek(RAM):} Açılan kullanıcı dosyalarını ve program
+dosyalarını geçici olarak tutar ve burada dosyalarla ilgili işlemlerin
+yapılmasında olanak verir.
+
+\end{frame}
+
+\begin{frame}{Bellek ve Depolama}
+\protect\hypertarget{bellek-ve-depolama-3}{}
+
+\justify
+
+\textbf{Yalnız Okunabilir Bellek (ROM) ve Bios:} Elektriğin kesilmesi
+veya bilgisayarın kapatılması durumunda kaybolmayacak sistem bilgileri
+ve BİOS(Bilgisayarın açılarak çalışır duruma gelmesini sağlayan küçük
+bir kontrol grubudur) bu Rom bellek Chip'ine yerleştirilmiştir.
+
+\textbf{Ön Bellek:} Ram Belliğin hızı CPU hızından düşüktür. bu yüzden
+ön bellek Ram ile CPU arasındaki veri transferlerinde görev yapar.
+
+\textbf{Ekran Kartı:} Ram Bellekteki bilgilerin(açık olan dosyaların)
+görüntülerinin ekrana iletişmesini sağlar.
+
+\end{frame}
+
+\begin{frame}{Bellek ve Depolama}
+\protect\hypertarget{bellek-ve-depolama-4}{}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=\textheight]{C:/Users/Ali/Desktop/sunum/kis6.jpg}
+\caption{HDD ve SSD}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}{Bellek ve Depolama}
+\protect\hypertarget{bellek-ve-depolama-5}{}
+
+\justify
+
+\textbf{Sabit Disk:} Bilgi depolamak amacı ile kullanılan kasa
+içerisindeki kutuya yerleştirilmiş ikincil bellek birimidir.
+Bilgisayardaki yazılımlar genellikle sabit diske kurulur. Kalıcı olarak
+saklanması istanene veri sabit diske kaydedilir. Masaüstü bilgisayarlara
+SATA, USB ve SAS kabloları ile bağlanan modelleri vardır. SSD'ler
+performans, elektrik tüketimi, ses ve dayanıklılık açısından manyetik
+disklere göre daha iyi olmalarına karşın kapasiteleri daha düşük ve
+fiyatları daha yüksektir.
+
+\end{frame}
+
+\begin{frame}{Bellek ve Depolama}
+\protect\hypertarget{bellek-ve-depolama-6}{}
+
+Table 1. Boyut Kavramları
+
+\begin{table}[H]
+\centering
+\begin{tabular}{l|l}
+\hline
+\textbf{Sayi} & \textbf{Boyut}\\
+\hline
+0 veya 1 & 1 bit\\
+\hline
+8 bit & 1 byte\\
+\hline
+1024 byte & 1 kilobyte\\
+\hline
+1024 KB & 1 megabyte\\
+\hline
+1024 MB & 1 gigabyte\\
+\hline
+1024 GB & 1 terabyte\\
+\hline
+\end{tabular}
+\end{table}
+
+\end{frame}
+
+\begin{frame}{Giriş ve Çıkış Birimleri}
+\protect\hypertarget{giriux15f-ve-uxe7ux131kux131ux15f-birimleri}{}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=\textheight]{C:/Users/Ali/Desktop/sunum/kis7.jpg}
+\caption{Giriş-İşlem Birimi-Çıkış Ünitesi Diyagramı}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}{Giriş ve Çıkış Birimleri}
+\protect\hypertarget{giriux15f-ve-uxe7ux131kux131ux15f-birimleri-1}{}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=\textheight]{C:/Users/Ali/Desktop/sunum/kis8.jpg}
+\caption{Giriş- Çıkış Birimleri}
+\end{figure}
+
+\emph{Kişisel bilgisayarlar bip sesi çıkarırken farklı seslerin elde
+edilerek çıkış birimlerine aktarılması için Ses kartının yer alması
+gerekir.}
+
+\end{frame}
+
+\hypertarget{yazux131lux131m}{%
+\section{Yazılım}\label{yazux131lux131m}}
+
+\begin{frame}{Temel kavramlar}
+\protect\hypertarget{temel-kavramlar}{}
+
+\justify
+
+\begin{quote}
+\textbf{Yazılım:} Bilgisayarı çalıştırmaya yarayan, fiziksel kısım
+dışında kalan her şeye yazılım denir. Yazılım programları ifade eder.
+Bilgisayar bu programlar ile istenildiği gibi yönlendirilir.
+\end{quote}
+
+\end{frame}
+
+\begin{frame}{Temel kavramlar}
+\protect\hypertarget{temel-kavramlar-1}{}
+
+\begin{itemize}
+\tightlist
+\item
+  İşletim Sistemi Yazılımları
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Windows
+  \item
+    Macos
+  \item
+    Linux
+  \item
+    Android
+  \item
+    IOS
+  \end{itemize}
+\item
+  Uygulama Yazılımlar
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Microsoft Office
+  \item
+    Skype
+  \item
+    Google Chrome
+  \item
+    Notepad
+  \item
+    Skype vb.
+  \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Temel kavramlar}
+\protect\hypertarget{temel-kavramlar-2}{}
+
+\justify
+
+\textbf{Program:} Belirli amaca yönelik olarak yazılmış bilgisayarda
+yerine getirilmesi istenilen sıralı işlemler için komut ve işlem
+adımlarının tümüne program denmektedir.
+
+\textbf{Program Dili:} Bilgisayar programlar yazımında belli kurallar
+dizisi takip edilir. Bu kurallar dizisinin oluşturduğu gruba
+\emph{Bilgisayar Programlama Dili} denir.
+
+\textbf{Makine Dili:} Makine tarafından hiçbir değişikliğe uğratılmadan
+kullanabilen dillerdir.
+
+\textbf{Sembolik Dili:} Sembollerle yazılan programa dilidir.
+
+\end{frame}
+
+\begin{frame}{Temel kavramlar}
+\protect\hypertarget{temel-kavramlar-3}{}
+
+\justify
+
+\textbf{Alt düzey Programlama Dilleri:} Makine diline çok yakındaır.
+Yazılan programlar küçük bir çevirme işlemi ile makine diline
+dönüştürülür.
+
+\textbf{Üst Düzey Programlama Dilleri:} Bilgisayar kullanıcısının
+kolaylıkla yazabildiği makine diline mutlaka çevrilmesi gerek dillerdir.
+
+\end{frame}
+
+\begin{frame}{Temel kavramlar}
+\protect\hypertarget{temel-kavramlar-4}{}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.5\textwidth,height=\textheight]{C:/Users/Ali/Desktop/sunum/kis9.jpg}
+\caption{En Çok Kullanılan Program Dİlleri}
+\end{figure}
+
+\end{frame}
+
+\hypertarget{aux11flar}{%
+\section{Ağlar}\label{aux11flar}}
+
+\begin{quote}
+Bilgisayar ağı: En az iki bilgisayarın kablolu ve kablosuz olarak
+birbiri ile bağlantı oluşturmasıdır. Bu bağlantı sonucunda iletişim ile
+veri alışverişi yapılabilir.
+\end{quote}
+
+\begin{frame}{Ağ Türleri}
+\protect\hypertarget{aux11f-tuxfcrleri}{}
+
+\begin{itemize}
+\item
+  \textbf{LAN(Local Area Network):} Yerel bölge ağları, bilgisayarları
+  ve diğer bilgi işlem araçlarını kısıtlı bir fiziksel çevre dahilinde
+  birbirine kablolu olarak bağlar(ofis,ev,bina gibi).
+\item
+  \textbf{WLAN(Wireless Local Area Network):} Kablosuz yerel ağlar, dar
+  coğrafik alanda firmaların veya hanehalkarlın kablosuz olarak
+  bağlantılı olması durumudur.
+\item
+  \textbf{WAN(Wide Area Network):} Geniş bölge ağlar, ülke ve eyalet
+  gibi geniş coğrafi bölgelerde kullanıalabilecek elektronik haberleşme
+  ağıdır.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Ağ Türleri}
+\protect\hypertarget{aux11f-tuxfcrleri-1}{}
+
+\justify
+
+\textbf{İnternet:} Bilgisayar ve Bilgisayar ağlarının arasındaki
+iletişimin evrensel sisteminden oluşur, Bu iletişim TCP/IP protocols
+yardımıyla sağlanır. İnternet başkarda basit veri alışverişini sağlamak
+amacıyla ortaya çıkmasına rağmen bugünlerde bütün toplulukların sosyal
+alanlarını(Ekonomi, Sosyal platform, Bilgi edinme, Sağlık Eğitim gibi)
+etkilemiştir.
+
+\textbf{Extranet:} İnternetin bir bölümü olarak bağımsız işbirlikçilerin
+eriştiği bir ağdır.
+
+\end{frame}
+
+\begin{frame}{Veri Aktarımı}
+\protect\hypertarget{veri-aktarux131mux131}{}
+
+\justify
+
+\textbf{İndirme(Download):} Yerel bilgisayar üzerinde ağ bilgisayarından
+dijital veri kopyası almak olarak ifade edilen terime
+\emph{İndirme(Download)} denir. Diğer taraftan ağ üzerinde dijital
+içerik yerleştirmeye \emph{Yükleme(Upload)} denir.
+
+\textbf{Bitrate:} Modem(ağ) vesilesi ile veri transferi yapılması
+sonucunda ağ aracılığıyla dijital veri akışı hızı için ölçüm birimine
+\emph{Bitrate} denir.
+
+1,000 bit/s rate = 1 kbit (her saniye üzerinden)
+
+1,000,000 bit/s rate = 1 Mbit
+
+1,000,000,000 bit/s rate = 1 Gbit
+
+\end{frame}
+
+\begin{frame}{Veri Aktarımı}
+\protect\hypertarget{veri-aktarux131mux131-1}{}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Bağlantı Metodları}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Mobil
+  \item
+    Uydu
+  \item
+    Wireless(Wi-Fi)
+  \item
+    Kablo
+  \item
+    Geniş bant
+  \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\end{document}
