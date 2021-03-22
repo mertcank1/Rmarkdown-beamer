@@ -1,0 +1,191 @@
+---
+title: "Crispr Cas-9"
+author: "Msc.Ali Mertcan KÖSE"
+date: 'Supervisor: PhD.Ozan KOCADAĞLI'
+output:
+  beamer_presentation: null
+  colortheme: dolphin
+  fonttheme: structurebold
+  ioslides_presentation: default
+  pdf_document: default
+  slidy_presentation: default
+institute: Mimar Sinan Güzel Sanatlar Üniversitesi
+mainfont: Times New Roman
+header-includes:
+- \usepackage[document]{ragged2e}
+- \usepackage{caption}
+- \usepackage{graphicx}
+- \usepackage{fancyvrb}
+- \usepackage{longtable,booktabs}
+- \usepackage{caption}
+- \usepackage{fancyhdr}
+- \usepackage{movie15}
+- \usepackage{xmpmulti}
+- \usepackage{hyperref}
+- \usepackage{longtable,booktabs}
+- \usepackage{caption}
+- \usepackage{footnotehyper}
+- \titlegraphic{\includegraphics[height=3cm]{C:/Users/Ali/Desktop/Crispr/ybis4.png}\hspace*{0cm}\vspace*{7.5cm}}
+theme: Copenhagen
+fontsize: 12pt
+---
+
+## Crispr Cas-9
+
+\justify
+
+**CRISPR (Clustered Regularly Interspaced Short Palindromic Repeats):** *"Düzenli Aralıklarla Bölünmüş Palindromik Tekrar Kümeleri"*
+
+- DNA dizisi üzerinde, Crispr lokosu(Bir genin kromozonda düştüğü yerdir) tanımlayan gen dizilimidir. Tekrar diziler bir canlı için tamamen aynı olmakla beraber tekrarların arasındaki dizileri birbirinden farklılık göstermektedir.
+
+**Cas:** Bu, bağışıklılık sisteminde görev alan proteinlerin genel adıdır.
+
+
+## Crispr Cas-9 
+
+![DNA vs RNA.](C:/Users/Ali/Desktop/Crispr/DNA.jpg){ width=70%}
+
+
+## Crispr Cas-9 
+
+\justify
+
+Bakteri ve virüsler bütün yaşam boyunca birbirleri ile savaş halindedir. Bakteriyelfajllar(fajlar-*Bakterileri enjekte eden virüslerdir*) bakterileri avlıyorlardır. Özellikle Okyanusta fajlar bakterilerin %40'nı öldürüyordur. Fajlar kendi kodlarını bakterilerin içine ekleyip onları kendi kodları gibi kullanmaktadır. Diğer taraftan Bakteriler güvenlik duvarları ile fajlara karşı koymasına rağmen genellikle başarısız olmaktadır, fakat bazen bakteri saldırıdan kurtulabilir. Bu durumda bakteriler en güçlü antivirus sistemini çalıştırmaktadır.
+
+## Crispr Cas-9 
+
+\justify
+
+Virüs DNA'sını Crispr denilen DNA arşivinde saklıyor. Burada, ihtiyaç olunana dek saklanıyor. Virüs tekrar saldırdığında, Bakteri DNA arşivinden hemen bir RNA kopyası çıkartıyor(gRNA), ve gizli bir silah kuşanıyor(Buna CAS-9 proteini deniyor). Protein bakterinin içini istilacıdan bir iz bulmak için tarıyor. Her parçayı arşivdeki örnekle karşılaştırarak mükemmel uyuşmayı bulduğunda aktive oluyor ve virüs DNA'sını kesiyor. Saldırıya karşı bakterinin kendisini korumasını yararsız yapıyor. Bu yüzden Cas-9'u özel yapan şey tamamen kusursuz olması, ve neredeyse DNA içinde bir cerrah edası yaratmasıdır. Asıl önemli olan olay, Crispr'ın progranabilir olduğu zaman başlıyor. "Düzenlemek istediğin DNA'nın kopyasını ver ve sisteme yaşayan bir hücreye koy."
+
+## Crispr Cas-9 
+
+\justify
+Eğer genetik manipulasyonu bir harita olarak düşünürsek burada Crispr GPS gibidir. Kusursuz, ucuz ve kolay olmasının yanı sıra, Crispr yaşayan hücreleri düzenleme imkanı sunuyor, genleri açıp kapatmaya ve hedef belirleyip özel DNA'ları çalıştırmaya çalışıyor.Ayrıca her türlü hücrede çalışabilir(Mikroorganizma, bitki, hayvan ya da insan). Crispr bu anlamda DNA yapısını değiştiren bir yapıdır, yalnız buradaki önemli husus ise bu haritada en iyi modelleme yaparak en iyi DNA üzerindeki zarar görmüş hücre yapılarını en iyi şekilde düzenlemektir.
+
+## Crispr Cas-9 
+
+\justify
+
+**Cas-9:** *CS.pyogenes* Cas9 geniş(1368 aminoasit) çoklu alanlara sahip ve multifonksiyonel DNA endonükleazdır.
+
+**gRNA:** Cas bağlanması için gerekli olan iskele dizisinden ve değiştirilecek genomik hedefi tanımlayan 20 aralıklı nükleotidden oluşan kısa sentetik bir RNA dır
+
+**PAM:** Pam dizilimi Cas9 için bağlayıcı bir sinyal görevinde bulunan bir dizilimdir, ancak bu tam dizilim kullanılan Cas proteinine bağlıdır. Böylece hedef dizilimi bulmada PAM'in tanımlanmasının büyük rolü vardır. Burada PAM dizilimin sistematik 3'lü nükleotid dizilimi göz önünde bulundururularak hedef dizilimi hakkında eşleme yapılır. Böylece Crispr çalışmalarında Cas9 kullanalarak, PAM dizilimi üzerinden işlem yapılacak(mutasyon/ekleme/çıkarma) hedef dizilimi eşlemesi yapılır.
+
+
+## Crispr Cas-9
+ 
+
+![Crispr Cas-9 Sistemi.](C:/Users/Ali/Desktop/Crispr/DNACas.jpg){ width=70%}
+
+
+## Crispr Cas-9
+
+![PAM dizilimi.](C:/Users/Ali/Desktop/Crispr/PAM3.jpg){ width=70%}
+
+## Crispr Cas-9
+ 
+
+![Cas-9.](C:/Users/Ali/Desktop/Crispr/CAs9.jpg){ width=90%}
+
+## Crispr Cas-9
+ 
+
+![Cas proteinine göre PAM dizilimi.](C:/Users/Ali/Desktop/Crispr/PAMs.jpg){ width=100%}
+
+## Crispr Cas-9
+
+\justify
+
+**Target On:** gRNA hedef dizisi tarafından belirtilen istenen bir konumda Cas9 bölünmesi aktivitesine "Target On" denir.
+
+**Target Off:** Cas9'u istenmeyen genomik konumlara almak için yeterli homolojiye sahip gRNA hedefleme dizisi nedeniyle istenmeyen yerlerdeki Cas9 bölünmesine "Target Off" denir.
+
+
+## Crispr Cas-9
+
+\justify
+
+**Gene Knockout:** Son zamanlarda Gen inaktivisyonu olarak nitelendirilen, yaygın olarak *Gene knockout* olarak bilinen ifade, fonksiyonel önemli spesifik genlerin ve  kompleksli metabolik süreçler üzerindeki nihai olarak çeşitli hastalıklara neden olan genler silinebilir veya değiştirilebilir. Burada homolojik olmayan bir yaklaşım vardır.
+
+### Homoloji olmayan modelleme
+(NHEJ) homolog olmayan uç birleştirmedir. Genellikle bu birleştirme yöntemiyle dominant alleli bozmak için kullanılır. Eğer hastalık bir genin işlev kaybetmesi ile oluşuyorsa, HDR ile donör kalıp üzerinde genin düzgün işleve sahip olanının kopyası kullanılark düzeltilebilir
+
+
+## Crispr Cas-9
+
+\justify
+
+**Gene Knockin:**  Genetik anlamda hücreyi onarmanın bir diğer yolu ise **Gene Knockin** metotudur. Bu yöntem ile gen modifikasyonu ya da eklemesi yapılabilir.Burada homolojik bir yaklaşım vardır.
+
+
+### Homoloji modelleme
+(HDR)Homoloji modelleme yöntemi x-ray cyrstallograph ya da MR çalışmalarıyla deneysel olarak yapısı belirlenmiş bir proteinin kalıp olarak kullanılıdğı, benzerliklerden yola çıkılarak hedef proteinin 3 boyutlu yapısının belirlendiği bir yaklaşımdır. DNA donörüyle birlikte verildiğinde Beta katenin kodlayan gende spesifik nokta mutasyonu olduğu ve bu stratejinin daha kesin genom düzenleme süreçlerinde kullanabileceği yöntemlerden biridir.
+
+## Crispr Cas-9
+
+
+![Knockout-Knockin.](C:/Users/Ali/Desktop/Crispr/NHEJ-HDR.jpg){ width=100%}
+
+## Crispr Cas-9
+
+
+![Knockout vs Knockin.](C:/Users/Ali/Desktop/Crispr/koki.jpg){ width=90%}
+
+## Crispr Cas-9
+
+\justify
+
+- Domain-Specific introduction to machine learning terminology, pitfalls and oppurtunities in Crispr-based gene editing
+  + Amaç: Machine learning algoritmaları ile  gende hedeflenen pozisyonu ve hedeflenen akson gibi özelliklerini içeren poziyonlar ile belirlenen modeller ile Crispr Ve Azimuth yaklaşımlarıyla geliştirmektir. Böylece Cas-9'un istenmeyen nükleaz lokusu üzerindeki lokasyonu tahmin edilebilir. (**Features:** Cell line, SgRNA, Chromosome, Start, End, Target Gene, SgRNA Sequence, Direction, PubMed ID, Read Count final replicate1,Read Count final replicate2, Read count initial replicate, Gene score, Expreiment Type, Hit)
+  
+## Crispr Cas-9
+
+\justify
+- A machine learning approach for predicting Crispr-Cas9 cleavage efficiencies and patterns underlying its mechanism of action
+  + Amaç: Crispr-Cas9'un bölünme etkinliğini potansiyel olarak etkileyen  özellikleri incelemektir. DNA ve RNA dizilimi göz önünde bulundurularak off-target diziliminin Machine learning algoritmalarıyla tahmin edilmesidir.(**Features:**Study, Ontarget title, SgRNA sequence, DNA site strand, strand, coordinate(start-end), chromosone, mismatch, nuckeotide-position, etc. )
+  
+## Crispr Cas-9
+
+\fontsize{6pt}{7.2}\selectfont
+
+| On target Software 	|        Model        	|             PAM             	|
+|:------------------:	|:-------------------:	|:---------------------------:	|
+|     DeepCRISPR     	|        CNN\footnote[frame]{Convolution Neural Network}      	|             NGG             	|
+|      DeepCpf1      	|         CNN         	|             TTTN            	|
+|      DeepCas9      	|         CNN         	|             NGG             	|
+|     CRISPRater     	|        L1-reg\footnote[frame]{L-1 Regression}       	|             NGG             	|
+|      WU-CRISPR     	|         SVM\footnote[frame]{Support Vektor Machine}    	|             NGG             	|
+|     SgRNAScorer    	|        SVM(C)\footnote[frame]{using SVM to classify (+1 represent high activity,-1 represent low-activity) }       	| NGG,NAG<br>NNAGAAW,NNNNGMTT 	|
+|       TUSCAN       	|          RF\footnote[frame]{Random Forest }         	|             NGG             	|
+|         SSC        	|     Elastic Net     	|             NGG             	|
+|     CRISPRScan     	|      Linear reg     	|             NGG             	|
+|     Azimuth1.0     	|     Logistic reg    	|             NGG             	|
+|     Azimuth2.0     	|         GBRT\footnote[frame]{Gradient Boost Regression Tree }         	|             NGG             	|
+|     CRISPRpred     	|         SVM         	|             NGG             	|
+|      ge-CRISPR     	|         SVM         	|             NGG             	|
+|       CRISTA       	|    RF   	|             NGG             	|
+|        BAGEL       	| Bayesian Classifier 	|             NGG             	|
+  
+
+## Crispr Cas-9
+
+Crispr cas-9 tanıtım videosu [link]\footnote[frame]{https://www.youtube.com/watch?v=4YKFw2KZA5o}
+
+[link]: https://www.youtube.com/watch?v=4YKFw2KZA5o
+
+
+## Referans 
+
+\justify
+- Jiang, F., Doudna J.A.(2017).Crispr-Cas9 Structures and Machanisms, *Annual Review Biophys*, 46:505-29.
+
+- https://www.nature.com/articles/d41586-020-00903-x
+
+- https://www.addgene.org/guides/crispr/
+
+- Hui, D.Y. (1998). Utility and Importance of Gene Knockout Animals For Nutritional and Metabolic Research, *The Journal of Nutrition*, 128(11),2052-2057.
+
+- Roebroek, A.J.M, Gordts, P.L.S, Reekmans, S. (2011).Transgenic Mouse Methods and Protocols, Humana Press, New York. pp.257-275.
+
